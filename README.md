@@ -1,4 +1,4 @@
-tips
+code-snippets
 ====
 
-Handy tips in some programming languages
+Handy code snippets in some programming languages as python, R and bash.
