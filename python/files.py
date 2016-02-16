@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Copyright (c) 2015 Felipe Gallego. All rights reserved.
+# Copyright (c) 2016 Felipe Gallego. All rights reserved.
 #
-# This file is part of code-snippets: https://github.com/felgari/code-snippets
+# This file is part of code-snippets: https://github.com/felgari/snippets
 #
 # This is free software: you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by
@@ -24,9 +24,39 @@ CSV_MIN_NUM_OF_ITEMS = 2
 FIELD_NAME = "EXPOSURE"
 
 """ 
+File names.
+-------------------------------------------------------------------------------
+"""
+# Get the path and the name of a complete file name.
+import os
+path, file_name = os.path.split(complete_file_name)
+
+# Build the complete name of a file using a path and the file name.
+import os
+complete_file_name = os.path.join(path, file_name)
+
+# Returns a string that contains only the part with the names of the directories.
+import os
+os.path.basename(path)
+
+# Get a list whose elements are the parts of the path.
+import os
+path_splitted = os.path.split(os.sep)
+
+""" 
+Directories.
+-------------------------------------------------------------------------------
+"""
+
+# Get all the files names in a path with a given extension.    
+import glob
+files_full_path = [f for f in glob.glob(os.path.join(path, "*." + FILE_EXT))]
+
+""" 
 Text files.
 -------------------------------------------------------------------------------
 """
+
 def read_text_file(file_name):
     """Read a text file.
     
@@ -52,6 +82,7 @@ def read_text_file(file_name):
 CSV files.
 -------------------------------------------------------------------------------
 """
+
 def read_csv_file(file_name):
     """Read a CSV file.
     
@@ -113,6 +144,7 @@ def write_csv_file(file_name, data):
 FIT files.
 -------------------------------------------------------------------------------
 """
+
 def open_fit_file(file_name):
     """Read a FIT file.
     

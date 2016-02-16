@@ -14,6 +14,9 @@ list(itertools.chain.from_iterable(here_my_list))
 # Sort rows of a list by a column, keeping the position of each column.
 here_my_numpy_array[here_my_numpy_array[:,here_my_column_number].argsort()]
 
+# Sort the characters of a string.
+''.join(sorted(the_string[i])) 
+
 # Extract a column from a numpy array (column is zero based).
 here_my_numpy_array[:,column_number]
 

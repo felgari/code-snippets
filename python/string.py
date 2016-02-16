@@ -18,20 +18,28 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 """ 
-Console.
+Strings.
 -------------------------------------------------------------------------------
 """
 
-# An infinite loop that exits when Ctrl-C is pressed.
-exit = False
+# Remove empty characters at the start and the end of a string.
+the_string.strip()
 
-while not exit:
-    try:       
-        
-        # Do processing
-        pass
-                         
-    # To catch a Ctrl-C.
-    except KeyboardInterrupt:
-        exit = True
-        print "Exiting, Ctrl-C. pressed"
+# Find the position of a string into another, returns -1 if not found.
+pos = the_string.find(string_to_find)
+
+# Find the last position (find begins at the right) of a string into another, 
+# returns -1 if not found.
+pos = the_string.rfind(string_to_find)
+
+# Check if a string starts with a given substring.
+the_string.startswith(substring)
+
+# Replace in a string a given substring with another.
+the_string.replace(substring_1, substring_2)
+
+# Get a string of file names from a list containing the file names.
+list_of_files = str(list_with_strings).translate(None, "[]\'")
+
+# Generate a list from a string whose elements are substrings delimited by separators.
+the_list = the_string.split(separator)

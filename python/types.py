@@ -18,20 +18,12 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 """ 
-Console.
+Types.
 -------------------------------------------------------------------------------
 """
 
-# An infinite loop that exits when Ctrl-C is pressed.
-exit = False
+# Get the type of an object.
+type(ob)
 
-while not exit:
-    try:       
-        
-        # Do processing
-        pass
-                         
-    # To catch a Ctrl-C.
-    except KeyboardInterrupt:
-        exit = True
-        print "Exiting, Ctrl-C. pressed"
+# Check if all the elements in a list are float.
+all(isinstance(x, float) for x in data_numbers)

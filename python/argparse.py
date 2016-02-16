@@ -1,3 +1,22 @@
+# -*- coding: utf-8 -*-
+
+# Copyright (c) 2016 Felipe Gallego. All rights reserved.
+#
+# This file is part of code-snippets: https://github.com/felgari/snippets
+#
+# This is free software: you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+
 # Template for a class that uses argparse.
 
 import argparse
@@ -13,13 +32,15 @@ class ProgramArgumentsException(Exception):
         return self._msg
 
 class ProgramArguments(object):
-    """ Encapsulates the definition and processing of program arguments. """
+    """Encapsulates the definition and processing of program arguments.
+	
+	"""
     
     # Constants
 
 
     def __init__(self):
-        """ Initializes parser. 
+        """Initializes parser. 
         
         Initialization of variables and the object ProgramArguments 
         with the definition of arguments to use.
@@ -39,7 +60,9 @@ class ProgramArguments(object):
 
     
     def init_parser(self):
-        """Initializes the ArgumentParser object."""
+        """Initializes the ArgumentParser object.
+		
+		"""
         
         self._parser = argparse.ArgumentParser()
         
@@ -50,7 +73,9 @@ class ProgramArguments(object):
                                   help="A program argument for a bool value.")
 
     def parse_and_update(self):
-        """Parse the program arguments and update attributes."""
+        """Parse the program arguments and update attributes.
+		
+		"""
 
         try:
             # Parse program arguments.        
@@ -63,18 +88,24 @@ class ProgramArguments(object):
             raise ProgramArgumentsException(ae.message)                         
                 
     def process_program_arguments(self):
-        """Parse and check coherence of program arguments."""     
+        """Parse and check coherence of program arguments.
+		
+		"""     
         
         self.init_parser() 
 
         self.parse_and_update()
  
     def print_usage(self):
-        """Print arguments options """
+        """Print arguments options.
+		
+		"""
                 
         self._parser.print_usage()     
         
     def print_help(self):
-        """Print help for arguments options """
+        """Print help for arguments options.
+		
+		"""
                 
         self._parser.print_help()
