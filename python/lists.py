@@ -78,3 +78,6 @@ sorted(the_list, key=lambda a_element: a_element[0])
 # Sort rows of a list by a column, keeping the position of each column.
 import numpy as np
 here_my_numpy_array[here_my_numpy_array[:,here_my_column_number].argsort()]
+
+# Get the index of an item in a list.
+the_list.index(the_item)
