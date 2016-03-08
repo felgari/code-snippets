@@ -81,3 +81,6 @@ here_my_numpy_array[here_my_numpy_array[:,here_my_column_number].argsort()]
 
 # Get the index of an item in a list.
 the_list.index(the_item)
+
+# Get the (first) index of the maximum element of a list.
+the_list.index(max(the_list))
