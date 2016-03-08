@@ -125,7 +125,7 @@ def write_csv_file(file_name, data):
     """    
     
     try:                
-        with open(file_name, 'w') as fw:
+        with open(file_name, 'wb') as fw:
             
             writer = csv.writer(fw, delimiter='\t')
     
