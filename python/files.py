@@ -77,6 +77,28 @@ def read_text_file(file_name):
         
     except IOError as ioe:
          print "Error reading text file: '%s'" % file_name  
+         
+def save_text_file(file_name, lines):
+    """Read a text file.
+    
+    Args:
+        file_name: Name of the file to save.
+        lines: List with the lines to save.
+    
+    Returns:
+        ?
+        
+    """    
+    
+    try:
+        with open(file_name, "w") as f:
+            for l in lines:
+                
+                # Process text line.        
+                f.write("%s\n" % l)
+        
+    except IOError as ioe:
+         print "Error saving text file: '%s'" % file_name           
 
 """
 CSV files.
