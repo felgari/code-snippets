@@ -84,3 +84,20 @@ the_list.index(the_item)
 
 # Get the (first) index of the maximum element of a list.
 the_list.index(max(the_list))
+
+# Remove an item from a list by value (the first found).
+the_list.remove(value)
+
+# Remove elements of a list by index.
+del the_list[2]
+del the_list[1:4]
+
+# Logic operations over the items of a list.
+
+# Return True if all elements are True.
+all(the_list)
+all([ the_item == a_value for the_item in the_list ])
+
+# Return True if any element is True.
+any(the_list)
+any([ the_item == a_value for the_item in the_list ])
