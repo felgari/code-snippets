@@ -43,3 +43,7 @@ list_of_files = str(list_with_strings).translate(None, "[]\'")
 
 # Generate a list from a string whose elements are substrings delimited by separators.
 the_list = the_string.split(separator)
+
+# Putting leading zeros when converting integer to string 
+# (Add 0 in this case if necessary to get two digits).
+str(the_int).zfill(2)
